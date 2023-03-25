@@ -6,9 +6,11 @@
   border: none;
   outline: none;
 }
+
 body {
   background-color: #9873fe;
 }
+
 .wrapper {
   width: 90%;
   max-width: 25em;
@@ -20,23 +22,28 @@ body {
   padding: 2em;
   border-radius: 0.8em;
 }
+
 .app-details {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+
 .app-icon {
   width: 9.37em;
 }
+
 .app-title {
   font-size: 1.6em;
   text-transform: uppercase;
   margin-bottom: 1em;
 }
+
 label {
   display: block;
   font-weight: 600;
 }
+
 input#amount {
   font-weight: 400;
   font-size: 1.2em;
@@ -47,16 +54,23 @@ input#amount {
   margin-bottom: 2em;
   padding: 0.5em;
 }
+
 input#amount:focus {
   color: #9873fe;
   border-color: #9873fe;
 }
+
 .dropdowns {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1em;
 }
+
+.dropdowns>span>i {
+  color: #9873fe;
+}
+
 select {
   width: 100%;
   padding: 0.6em;
@@ -65,17 +79,19 @@ select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url("arrow-down.svg");
+  background-image: url("../arrow-down.svg");
   background-repeat: no-repeat;
   background-position: right 15px top 50%, center;
   background-size: 20px 20px;
   background-color: #9873fe;
   color: #ffffff;
 }
+
 select option {
   background-color: #ffffff;
   color: #02002c;
 }
+
 button {
   font-size: 1em;
   width: 100%;
@@ -87,7 +103,9 @@ button {
   font-weight: 600;
 }
 
-.button:hover {background-color: #3e8e41}
+.button:hover {
+  background-color: #3e8e41
+}
 
 .button:active {
   background-color: #3e8e41;
@@ -102,13 +120,14 @@ button {
   color: #02002c;
   background-color: #e5dbff;
   padding: 0.8em 0;
+  overflow: auto;
 }
 
 
 .material-symbols-outlined {
   font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
 }
