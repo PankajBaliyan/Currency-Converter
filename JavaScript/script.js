@@ -1,6 +1,7 @@
 let api = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`;
 const fromDropDown = document.getElementById("from-currency-select");
 const toDropDown = document.getElementById("to-currency-select");
+const swapCurrency = document.getElementById("swap-currency");
 
 //Create dropdown from the currencies array
 currencies.forEach((currency) => {
@@ -21,8 +22,6 @@ currencies.forEach((currency) => {
 //Setting default values
 fromDropDown.value = "USD";
 toDropDown.value = "INR";
-// fromDropDown.value = "INR";
-// toDropDown.value = "USD";
 
 let convertCurrency = () => {
   //Create References
@@ -47,7 +46,17 @@ let convertCurrency = () => {
   }
 };
 
-document
-  .querySelector("#convert-button")
-  .addEventListener("click", convertCurrency);
+//Convert currency on input number & by clicking & after load of webpage & changing value of select/dropdown
+document.querySelector("#convert-button").addEventListener("click", convertCurrency);
 window.addEventListener("load", convertCurrency);
+document.querySelector("#amount").addEventListener("input",convertCurrency);
+document.querySelector("#from-currency-select").addEventListener("change",convertCurrency);
+document.querySelector("#to-currency-select").addEventListener("change",convertCurrency);
+
+//Swap currency
+swapCurrency.addEventListener("click", () => {
+  let temp = fromDropDown.value;
+  fromDropDown.value = toDropDown.value;
+  toDropDown.value = temp;
+  convertCurrency();
+})
